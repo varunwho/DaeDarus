@@ -10,17 +10,16 @@ nav {
     justify-content: space-between;
 }
 
-ul {
+ nav ul {
     display: flex;
     flex-direction: row;
     list-style: none;
     margin: 20px;
     align-items: center;
-
 }
 
 
-li a {
+nav ul li a {
     text-decoration: none;
     margin: 20px;
     color: #0D1137;
@@ -28,7 +27,7 @@ li a {
     padding: 5px 12px;
 }
 
-li a:hover {
+nav ul li a:hover {
     /* background-color: #0D1137; */
     background-color: #00FFA4;
     border-radius: 5px;
@@ -39,26 +38,107 @@ nav h1 {
     margin: 20px;
 }
 
-ul li:nth-child(3) a {
+nav ul li:nth-child(3) a {
     padding: 0;
 }
 
-ul li:nth-child(3) {
+nav ul li:nth-child(3) {
     border: 2px solid #0D1137;
     padding: 3px 0;
     margin-right: 20px;
 }
 
-ul li:nth-child(3):hover {
+nav ul li:nth-child(3):hover {
     background-color: #00FFA4;
 }
 
-ul li:nth-child(4) {
+nav ul li:nth-child(4) {
     border: 2px solid #0D1137;
     padding: 3px 0;
     margin-right: 20px;
 }
 
-ul li:nth-child(4):hover {
+nav ul li:nth-child(4):hover {
     background-color: #00FFA4;
+}
+
+.cards {
+    width: 75%;
+    margin: auto;
+    /* background-color: #00FFA4; */
+    padding: 25px;
+    /* color: purple; */
+    margin-top: 80px;
+    /* height: 1000px;   */
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.posts-area {
+    margin: 60px 30px;
+}
+
+.card {
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    text-align: center;
+    padding: 2em;
+    background: #fdfbfb; background: -moz-linear-gradient(-121deg,  #fdfbfb 0%,#eaedee 100%); background: -webkit-linear-gradient(-121deg,  #fdfbfb 0%,#eaedee 100%); background: linear-gradient(-121deg,  #fdfbfb 0%,#eaedee 100%);
+    flex-direction: column;
+    width: 300px;
+    height: 420px;
+}
+
+
+.profile-sidebar img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    border: 3px solid purple;
+}
+
+.social-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    width: 125px;
+    margin: 0 auto;
+    font-size: 1.125rem;
+}
+
+.profile-name {
+    font-size: 2rem;
+    margin: 8px 0;
+}
+
+.profile-position {
+    text-transform: uppercase;
+    margin: 5px 0;
+    text-decoration: bold;
+}
+
+.profile-skills p {
+    display: inline-block;
+    background-color: purple;
+    padding: 8px 14px;
+    color: #FFF;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.action-buttons {
+    margin: 30px 0;
+}
+
+.action-buttons a {
+    text-decoration: underline;
+    background-color: #00FFA4;
+    color: #0D1137;
+    padding: 8px 40px;
+    border-radius: 5px;
 }
