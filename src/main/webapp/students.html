@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/students.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>Students</title>
 </head>
@@ -187,7 +188,7 @@
                         <a href="">Reject</a>
                     </div>
                 </div>
-            </div>
+ 	            </div>
 
             <!-- <div class="modal-container" id="blur">
                 <div class="content">
@@ -197,17 +198,17 @@
         </div>
 
     <div id="popup">
-        <form action="edjuiwehfwiu">
+        <form action="addStudent" id="preset_form1" method="POST">
             
 
             <label for="lname">Name</label>
             <input type="text" id="lname" name="lastname" placeholder="Your name..">
             <label for="status">Current Job/Education Status</label>
-            <input type="text" id="status" name="status" placeholder="Your current job status..">
-            <label for="status">Current Job/Education Status</label>
+             
+            
             <input type="text" id="status" name="status" placeholder="Your current job status..">
             <label for="rskills">Skills</label>
-			<textarea id="sskills" name="sskills" rows="4" cols="50" placeholder="Add 2-3 comma seperated skills. For e.g. Html, CSS, JS">
+			<textarea id="sskills" name="sskills"  placeholder="Add 2-3 comma seperated skills. For e.g. Html, CSS, JS">
 			</textarea>	
 			<label for="email">E-mail Id</label>
 			<input type="email" id="email" name="email">
@@ -218,7 +219,7 @@
             
 
             
-            <input type="submit" value="Submit" onclick="toggle()">
+            <input type="submit" value="Submit" >
         </form>
         <a href="" onclick="toggle()">Close</a>
     </div>
@@ -231,6 +232,25 @@
             var popup = document.getElementById('popup');
             popup.classList.toggle('active');
         }
+        
+        let form1=$('preset_form1');
+        $(document).on('submit', '#preset_form1', function(event){
+          $.ajax({
+              type: form1.attr('method'),
+              url: form1.attr('action'),
+              data:form1.serialize(),
+              success:function(data)
+              {
+               alert("Profile Added!");
+                location.reload();
+              },
+              error:function()
+              {
+                alert("Failed to add request");
+              }
+            });
+        //event.preventDefault();
+        });
     </script>
 </body>
 </html>
