@@ -17,7 +17,7 @@
                 <li><a href="./students.html">Students</a></li>
                 <li><a href="./shortlisted.html">Shortlisted</a></li>
                 <div class="add-profile modal-container">
-                    <a href="#" onclick="toggle()">Add Profile<i class="fas fa-plus"></i></a>
+                    <a href="#" onclick="toggle()">Your Profile<i class="fas fa-plus"></i></a>
                 </div>
 
             </ul>
@@ -47,7 +47,7 @@
                     </div>
                     <div class="action-buttons">
                         <a href="#">Refer</a>
-                        <a href="">Shortlist</a>
+                        <a href="">Reject</a>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                     </div>
                     <div class="action-buttons">
                         <a href="#">Refer</a>
-                        <a href="">Shortlist</a>
+                        <a href="">Reject</a>
                     </div>
                 </div>
             </div>
@@ -103,7 +103,7 @@
                     </div>
                     <div class="action-buttons">
                         <a href="#">Refer</a>
-                        <a href="">Shortlist</a>
+                        <a href="">Reject</a>
                     </div>
                 </div>
             </div>
@@ -130,7 +130,7 @@
                     </div>
                     <div class="action-buttons">
                         <a href="#">Refer</a>
-                        <a href="">Shortlist</a>
+                        <a href="">Reject</a>
                     </div>
                 </div>
             </div>
@@ -157,7 +157,7 @@
                     </div>
                     <div class="action-buttons">
                         <a href="#">Refer</a>
-                        <a href="">Shortlist</a>
+                        <a href="">Reject</a>
                     </div>
                 </div>
             </div>
@@ -184,7 +184,7 @@
                     </div>
                     <div class="action-buttons">
                         <a href="#">Refer</a>
-                        <a href="">Shortlist</a>
+                        <a href="">Reject</a>
                     </div>
                 </div>
             </div>
@@ -198,18 +198,26 @@
 
     <div id="popup">
         <form action="edjuiwehfwiu">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            
 
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <label for="lname">Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your name..">
+            <label for="status">Current Job/Education Status</label>
+            <input type="text" id="status" name="status" placeholder="Your current job status..">
+            <label for="status">Current Job/Education Status</label>
+            <input type="text" id="status" name="status" placeholder="Your current job status..">
+            <label for="rskills">Skills</label>
+			<textarea id="sskills" name="sskills" rows="4" cols="50" placeholder="Add 2-3 comma seperated skills. For e.g. Html, CSS, JS">
+			</textarea>	
+			<label for="email">E-mail Id</label>
+			<input type="email" id="email" name="email">
+			<label for="linkedin">Linkedin Profile</label>
+            <input type="text" id="linkedin" name="linkedin" placeholder="Give the link for your profile">
+            <label for="git">Github(if applicable)</label>
+            <input type="text" id="git" name="git" placeholder="Your github link..">
+            
 
-            <label for="country">Country</label>
-            <select id="country" name="country">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-            </select>
+            
             <input type="submit" value="Submit" onclick="toggle()">
         </form>
         <a href="" onclick="toggle()">Close</a>
