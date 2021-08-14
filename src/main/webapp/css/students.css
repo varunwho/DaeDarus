@@ -90,7 +90,7 @@ nav ul li:nth-child(4):hover {
     background: #fdfbfb; background: -moz-linear-gradient(-121deg,  #fdfbfb 0%,#eaedee 100%); background: -webkit-linear-gradient(-121deg,  #fdfbfb 0%,#eaedee 100%); background: linear-gradient(-121deg,  #fdfbfb 0%,#eaedee 100%);
     flex-direction: column;
     width: 300px;
-    height: 480px;
+    height: 420px;
 }
 
 
@@ -119,7 +119,7 @@ nav ul li:nth-child(4):hover {
 
 .profile-position {
     text-transform: uppercase;
-    margin: 0;
+    margin: 5px 0;
     text-decoration: bold;
 }
 
@@ -130,11 +130,6 @@ nav ul li:nth-child(4):hover {
     color: #FFF;
     border-radius: 20px;
     margin: 5px;
-}
-
-
-.profile-referral {
-    margin: 0;
 }
 
 .action-buttons {
@@ -149,8 +144,12 @@ nav ul li:nth-child(4):hover {
     border-radius: 5px;
 }
 
+.action-buttons a:last-child {
+    background-color: #0D1137;
+    color: #00FFA4;
+}
 
-.add-referral a {
+.add-profile a {
     padding: 5px 12px;
     background-color: #0D1137;
     border-radius: 5px;
@@ -158,10 +157,9 @@ nav ul li:nth-child(4):hover {
     color: #FFF;
 }
 
-.add-referral a i {
+.add-profile a i {
     margin-left: 5px;
 }
-
 
 .modal-container {
     /* position: relative;

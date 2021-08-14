@@ -37,7 +37,12 @@ li a:hover {
     border: none;
 }
 
-nav h1 {
+nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+nav a h1 {
     margin: 20px;
 }
 
