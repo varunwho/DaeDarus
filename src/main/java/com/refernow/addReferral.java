@@ -44,7 +44,8 @@ public class addReferral extends HttpServlet {
 	    	 Class.forName("com.mysql.cj.jdbc.Driver");
 	    	
 	    	 out.println("<p>inside Try2</p>");
-		     con = (Connection) DriverManager.getConnection(connectionURL, user, pass);
+		     con = DriverManager.getConnection(connectionURL, user, pass);
+		     
 		     out.println("<p>inside Try3</p>");
 		     PreparedStatement ps = (PreparedStatement) con.prepareStatement("insert into referal(ref_name, comp_name,job_type,job_role,job_desc,skills) values(?,?,?,?,?,?)");
 		     ps.setString(1, name);

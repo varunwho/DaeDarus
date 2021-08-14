@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/referral.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <script src="jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./js/referal.js" ></script>
     <title>Referrals</title>
 </head>
@@ -200,7 +200,7 @@
         </div>
     </div>
     <div id="popup">
-        <form id="addref_form" action="addReferral" method="POST">
+        <form id="preset_form" action="addReferral" method="POST" >
             <label for="fname"> Name</label>
             <input type="text" id="fname" name="fname" placeholder="Your name..">
 
@@ -221,13 +221,12 @@
             <input type="text" id="role" name="role" placeholder="Job Role">
             <label for="desc">Job Description</label>
 
-			<textarea id="desc" name="desc" rows="4" cols="50">
-			Insert job description and requirements
+			<textarea id="desc" name="desc" rows="4" cols="50" placeholder="Insert job description and requirements">
 			</textarea>
 			<label for="rskills">Required Skills</label>
 
-			<textarea id="rskills" name="rskills" rows="4" cols="50">
-			Add 2-3 comma seperated skills. For e.g. Html, CSS, JS
+			<textarea id="rskills" name="rskills" rows="4" cols="50" placeholder="
+			Add 2-3 comma seperated skills. For e.g. Html, CSS, JS">
 			</textarea>	
             
             
@@ -244,6 +243,26 @@
             var popup = document.getElementById('popup');
             popup.classList.toggle('active');
         }
+        
+        let form1=$('preset_form');
+        $(document).on('submit', '#preset_form', function(event){
+          $.ajax({
+              type: form1.attr('method'),
+              url: form1.attr('action'),
+              data:form1.serialize(),
+              success:function(data)
+              {
+               alert("Referral Added!");
+                location.reload();
+              },
+              error:function()
+              {
+                alert("Failed to add referral");
+              }
+            });
+        //event.preventDefault();
+        });
+
     </script>
 </body>
 </html>
