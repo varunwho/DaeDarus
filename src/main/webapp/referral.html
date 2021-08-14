@@ -15,9 +15,7 @@
 <body>
     <div id="blur">
         <nav>
-            <h1>
-            <a href="./index.html">ReferNow</a>
-            </h1>
+            <a href="./index.html"><h1>ReferNow<i class="fas fa-briefcase"></i></h1></a>
             <ul>
                 <li><a href="./referral.html">Referral</a></li>
                 <li><a href="./students.html">Students</a></li>
@@ -195,11 +193,8 @@
                     <p class="profile-referral">Job ID: 256789qq </p>
                     <p>Skills required <i class="fas fa-long-arrow-alt-down"></i></p>
                     <div class="profile-skills">
-                        
                         <p>Digital Marketing</p>
                         <p>5+ years experience</p>
-                        
-                        
                     </div>
                     <div class="action-buttons">
                         <a href="#">Request</a>
@@ -210,16 +205,13 @@
         </div>
     </div>
     <div id="popup">
+        <a href="" onclick="toggle()"><i class="fas fa-times"></i></a>
         <form id="preset_form" action="addReferral" method="POST" >
             <label for="fname"> Name</label>
             <input type="text" id="fname" name="fname" placeholder="Your name..">
 
-            
-
             <label for="company">Company Name</label>
             <input type="text" id="company" name="company" placeholder="Which company's referall?">
-            
-
             
             <label for="jobtype">Job Type</label>
             <select id="jobtype" name="jobtype">
@@ -237,13 +229,10 @@
 
 			<textarea id="rskills" name="rskills" rows="4" cols="50" placeholder="
 			Add 2-3 comma seperated skills. For e.g. Html, CSS, JS">
-			</textarea>	
-            
-            
+			</textarea>	            
             
             <input type="submit" id="submit" value="Add Referral" >
         </form>
-        <a href="" onclick="toggle()">Close</a>
     </div>
     <script type="text/javascript">
         function toggle() {

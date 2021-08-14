@@ -48,6 +48,10 @@ nav a h1 {
     font-size: 1.75rem;
 }
 
+nav a h1 i {
+    margin-left: 5px;
+}
+
 ul li:nth-child(3) a {
     padding: 0;
 }
@@ -85,7 +89,7 @@ ul li:nth-child(4):hover {
 }
 
 .illustration {
-    flex: 1;
+    flex: 0.75;
 }
 
 
@@ -94,13 +98,16 @@ ul li:nth-child(4):hover {
     /* display: flex; */
     /* justify-content: center; */
     /* flex-direction: column; */
-    padding: 50px;
+    padding: 30px;
 }
 
 .about-text h2 {
     font-size: 3rem;
 }
 
+.about-text p {
+    font-size: 1.125rem;
+}
 
 footer {
     text-align: center;
