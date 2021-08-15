@@ -239,3 +239,17 @@ form {
 #popup a i {
     font-size: 2em;
 }
+
+.form-submit {
+    width: 50%;
+    margin: auto;
+}
+
+.form-submit input {
+    background-color: #0D1137;
+    color: #FFF;
+    padding: 5px 0;
+    margin: auto;
+    width: 100%;
+}
+
