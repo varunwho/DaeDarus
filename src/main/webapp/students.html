@@ -17,7 +17,7 @@
             <ul>
                 <li><a href="./referral.html">Referral</a></li>
                 <li><a href="./students.html">Students</a></li>
-                <li><a href="./shortlisted.html">Shortlisted</a></li>
+                
                 <div class="add-profile modal-container">
                     <a href="#" onclick="toggle()">Your Profile<i class="fas fa-plus"></i></a>
                 </div>
@@ -200,7 +200,7 @@
 
     <div id="popup">
         <a href="" onclick="toggle()"><i class="fas fa-times"></i></a>
-        <form action="addStudent" id="preset_form1" method="POST">
+        <form action="addStudent" id="preset_form1"  method="POST">
             
 
             <label for="lname">Name</label>
@@ -234,24 +234,7 @@
             popup.classList.toggle('active');
         }
         
-        let form1=$('preset_form1');
-        $(document).on('submit', '#preset_form1', function(event){
-          $.ajax({
-              type: form1.attr('method'),
-              url: form1.attr('action'),
-              data:form1.serialize(),
-              success:function(data)
-              {
-               alert("Profile Added!");
-                location.reload();
-              },
-              error:function()
-              {
-                alert("Failed to add request");
-              }
-            });
-        //event.preventDefault();
-        });
+        
     </script>
 </body>
 </html>

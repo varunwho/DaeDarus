@@ -103,12 +103,22 @@ ul li:nth-child(4):hover {
 
 .about-text h2 {
     font-size: 3rem;
+    text-align:center;
+    margin-bottom:15px;
 }
 
 .about-text p {
-    font-size: 1.125rem;
+    font-size: 1.025rem;
+    color: #400000;
 }
-
+.about-text1 p {
+    font-size: 1.125rem;
+    color: #ff80c0;
+}
+.about-text2 p {
+    font-size: 1.125rem;
+    color: #000080;
+}
 footer {
     text-align: center;
     margin-bottom: 0;

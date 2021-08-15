@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -46,14 +47,14 @@ public class addStudent extends HttpServlet {
 		     con = DriverManager.getConnection(connectionURL, user, pass);
 		     
 		     out.println("<p>inside Try3</p>");
-		     PreparedStatement ps = (PreparedStatement) con.prepareStatement("insert into seekers('name', 'status', 'skill', 'linkedin', 'github', 'email','s_id') values (?,?,?,?,?,?,?)");
+		     PreparedStatement ps = (PreparedStatement) con.prepareStatement("insert into seekers('name', 'status', 'skill', 'linkedin', 'github', 'email') values (?,?,?,?,?,?,)");
 		     ps.setString(1, name);
 		     ps.setString(2, status);
 		     ps.setString(3, sskill);
 		     ps.setString(4, lin);
 		     ps.setString(5, git);
 		     ps.setString(6, email);
-		     ps.setInt(7, 1234);
+		     
 
 		     result=ps.executeUpdate();
 	    	
@@ -81,6 +82,10 @@ public class addStudent extends HttpServlet {
 		else{
 			out.println(" Some Error Occurred");
 		}
+		
+		
+		RequestDispatcher rd= request.getRequestDispatcher("referral.jsp");
+		rd.forward(request, response);
 		
 	}
 
