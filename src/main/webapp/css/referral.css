@@ -216,3 +216,11 @@ form {
 #popup a i {
     font-size: 2em;
 }
+
+#submit {
+    background-color: #0D1137;
+    color: #FFF;
+    width:50%;
+    padding: 5px 0;
+    margin: auto;
+}
